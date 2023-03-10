@@ -6,7 +6,7 @@
 #    By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/02 12:27:39 by vflorez           #+#    #+#              #
-#    Updated: 2023/03/06 11:12:54 by vflorez          ###   ########.fr        #
+#    Updated: 2023/03/10 13:15:07 by vflorez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,19 @@ ft_memcpy.c\
 ft_memmove.c\
 ft_strlcpy.c\
 ft_strlcat.c\
+ft_toupper.c\
+ft_tolower.c\
+ft_strchr.c\
+ft_strrchr.c\
+ft_strncmp.c\
+ft_memchr.c\
+ft_memcmp.c\
+ft_strnstr.c\
+ft_atoi.c\
+ft_calloc.c\
+ft_strdup.c\
+ft_substr.c\
+ft_strjoin.c\
 
 
 OBJ = $(SRC:.c=.o)

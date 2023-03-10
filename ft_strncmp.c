@@ -1,46 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/04 14:35:17 by vflorez           #+#    #+#             */
-/*   Updated: 2023/03/07 10:38:48 by vflorez          ###   ########.fr       */
+/*   Created: 2023/03/06 14:06:30 by vflorez           #+#    #+#             */
+/*   Updated: 2023/03/09 17:21:33 by vflorez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	size_t	src_len;
 
-	src_len = 0;
-	while (src[src_len])
-		src_len++;
-	if (size == 0)
-		return (src_len);
 	i = 0;
-	while (src[i] && i < (size - 1))
+	while (i < n && (s1[i] || s2[i]))
 	{
-		dest[i] = src[i];
+		if (s1[i] != s2[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+		else if (s1[i] == '\0')
+			return (0);
 		i++;
 	}
-	dest[i] = '\0';
-	if (src_len > size - 1)
-		return (src_len);
-	return (i);
+	return (0);
 }
-/*
-#include<stdio.h>
-
-int main()
-{
-	char src[] = "hola como vas";
-	char dest[5];
-
-	printf("%zu\n", ft_strlcpy(dest, src, 12));
-	return 0;
-}*/

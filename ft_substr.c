@@ -1,45 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/03 20:22:31 by vflorez           #+#    #+#             */
-/*   Updated: 2023/03/06 21:28:21 by vflorez          ###   ########.fr       */
+/*   Created: 2023/03/08 18:50:06 by vflorez           #+#    #+#             */
+/*   Updated: 2023/03/10 13:18:45 by vflorez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	char	*substr;
+	size_t	i;
 
-	if (src == NULL && dest == NULL)
+	i = 0;
+	if (!s)
 		return (NULL);
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	while (n > 0)
+	else if (start > ft_strlen(s))
+		len = 0;
+	else if (len > ft_strlen(s))
+		len = ft_strlen(s);
+	substr = (char *)malloc(sizeof(*s) * (len + 1));
+	if (!substr)
+		return (NULL);
+	while (i < len)
 	{
-		*d = *s;
-		d++;
-		s++;
-		n--;
+		substr[i] = s[start + i];
+		i++;
 	}
-	return (dest);
+	substr[i] = '\0';
+	return (substr);
 }
 /*
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
-	char source[] = "Hola Mundo";
-	char destination [] = "12345";
-
-	ft_memcpy(destination, source, 2);
-
-	printf("La cadena de origen es: %s\n", source);
-	printf("La cadena de destino es : %s\n", destination);
+	char s[10] = "vradis";
+	printf("%s", ft_substr(s,3,5));
+	
+	return (0);
 }*/

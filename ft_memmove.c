@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/04 13:13:11 by vflorez           #+#    #+#             */
-/*   Updated: 2023/03/04 14:32:54 by vflorez          ###   ########.fr       */
+/*   Created: 2023/03/06 21:35:56 by vflorez           #+#    #+#             */
+/*   Updated: 2023/03/10 19:09:02 by vflorez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,22 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned int	i;
+	int	i;
 
+	i = n - 1;
 	if (src == NULL && dest == NULL)
 		return (NULL);
-	i = 0;
-	while (i < n)
+	else if (src > dest)
 	{
-		((char *)dest)[i] = ((const char *)src)[i];
-		i++;
+		ft_memcpy(dest, src, n);
+	}
+	else
+	{
+		while (i >= 0)
+		{
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+			i--;
+		}
 	}
 	return (dest);
 }
@@ -31,8 +38,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 int main()
 {
-	char dest[] = "vradis";
-	char source[] = "sabrina";
+	char dest[] = "123456789";
+	char source[] = "ABCDEFGHIJKL";
 	
 	printf("Antes de memmove : SRC %s, DEST %s\n", source, dest);
 
