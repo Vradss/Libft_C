@@ -1,26 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/06 12:45:43 by vflorez           #+#    #+#             */
-/*   Updated: 2023/03/12 14:47:25 by vflorez          ###   ########.fr       */
+/*   Created: 2023/03/16 11:08:36 by vflorez           #+#    #+#             */
+/*   Updated: 2023/03/16 11:28:24 by vflorez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int firstc)
+void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
 	i = 0;
-	while (*(s + i) != '\0' && *(s + i) != (char)firstc)
+	while (s[i] != '\0')
+	{
+		write(fd, &s[i], 1);
 		i++;
-	if (*(s + i) == (char)firstc)
-		return ((char *)s + i);
-	else
-		return (NULL);
+	}
 }
+/*
+#include <stdio.h>
+#include <fcntl.h>
+
+int main()
+{
+	int fd;
+
+	fd = open("vradis.txt", O_CREAT | O_WRONLY, 0644);
+	ft_putstr_fd("bbcita brrrr\n", fd);
+	ft_putstr_fd("GAAAAAAA\n", fd);
+
+	close (fd);
+	return (0);
+}*/

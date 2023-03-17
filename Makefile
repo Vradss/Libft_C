@@ -6,7 +6,7 @@
 #    By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/02 12:27:39 by vflorez           #+#    #+#              #
-#    Updated: 2023/03/10 13:15:07 by vflorez          ###   ########.fr        #
+#    Updated: 2023/03/16 13:15:30 by vflorez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,15 @@ ft_calloc.c\
 ft_strdup.c\
 ft_substr.c\
 ft_strjoin.c\
+ft_strtrim.c\
+ft_split.c\
+ft_itoa.c\
+ft_strmapi.c\
+ft_striteri.c\
+ft_putchar_fd.c\
+ft_putstr_fd.c\
+ft_putendl_fd.c\
+ft_putnbr_fd.c
 
 
 OBJ = $(SRC:.c=.o)

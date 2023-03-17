@@ -1,52 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/10 11:11:31 by vflorez           #+#    #+#             */
-/*   Updated: 2023/03/12 20:48:17 by vflorez          ###   ########.fr       */
+/*   Created: 2023/03/14 12:00:29 by vflorez           #+#    #+#             */
+/*   Updated: 2023/03/14 14:56:42 by vflorez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*result;
-	size_t	lens1;
-	size_t	lens2;
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	len;
 
-	lens1 = ft_strlen(s1);
-	lens2 = ft_strlen(s2);
-	result = malloc (sizeof(char) * (lens1 + lens2 + 1));
+	if (!s || !f)
+		return (NULL);
+	len = ft_strlen(s);
+	result = (char *)malloc(sizeof(char) * (len + 1));
 	if (!result)
 		return (NULL);
 	i = 0;
-	while (i < lens1)
+	while (i < len)
 	{
-		result[i] = s1[i];
+		result[i] = f(i, s[i]);
 		i++;
 	}
-	j = 0;
-	while (j < lens2)
-	{
-		result[i + j] = s2[j];
-		j++;
-	}
-	result[i + j] = '\0';
+	result[i] = '\0';
 	return (result);
 }
+/*
+#include <stdio.h>
 
-/*#include <stdio.h>
+char f(unsigned int i, char c)
+{
+	return(ft_toupper(c));
+}
 
 int main()
 {
-	char s1[] = "vradis";
-	char s2[] = "florez";
-	printf("%s\n", ft_strjoin(s1,s2));
+	char str1[] = "gaaaaaaaaa";
+	char* str2;
+	str2 = ft_strmapi(str1, f);
+	printf("%s\n", str2);
+	free(str2);
 	return (0);
 }*/
