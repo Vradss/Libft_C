@@ -6,7 +6,7 @@
 /*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:08:36 by vflorez           #+#    #+#             */
-/*   Updated: 2023/03/16 11:28:24 by vflorez          ###   ########.fr       */
+/*   Updated: 2023/03/17 09:07:12 by vflorez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-/*
-#include <stdio.h>
-#include <fcntl.h>
-
-int main()
-{
-	int fd;
-
-	fd = open("vradis.txt", O_CREAT | O_WRONLY, 0644);
-	ft_putstr_fd("bbcita brrrr\n", fd);
-	ft_putstr_fd("GAAAAAAA\n", fd);
-
-	close (fd);
-	return (0);
-}*/

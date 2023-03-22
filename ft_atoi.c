@@ -6,7 +6,7 @@
 /*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 12:53:00 by vflorez           #+#    #+#             */
-/*   Updated: 2023/03/12 21:11:35 by vflorez          ###   ########.fr       */
+/*   Updated: 2023/03/17 09:05:07 by vflorez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
-/*
-#include <stdio.h>
-int main(int ac, char **av)
-{
-	int mine;
-	int theirs;
-	if(ac == 2)
-	{
-		mine = ft_atoi(av[1]);
-		theirs = atoi(av[1]);
-		printf("mine: %d | theirs %d\n", mine , theirs);	
-	}
-	return(0);
-}*/

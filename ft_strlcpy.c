@@ -6,7 +6,7 @@
 /*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 14:35:17 by vflorez           #+#    #+#             */
-/*   Updated: 2023/03/12 18:02:46 by vflorez          ###   ########.fr       */
+/*   Updated: 2023/03/17 09:07:40 by vflorez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		return (src_len);
 	return (i);
 }
-/*
-#include<stdio.h>
-
-int main()
-{
-	char src[] = "hola como vas";
-	char dest[5];
-
-	printf("%zu\n", ft_strlcpy(dest, src, 12));
-	return 0;
-}*/

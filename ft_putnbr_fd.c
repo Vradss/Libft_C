@@ -6,7 +6,7 @@
 /*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 12:34:36 by vflorez           #+#    #+#             */
-/*   Updated: 2023/03/16 13:12:55 by vflorez          ###   ########.fr       */
+/*   Updated: 2023/03/21 11:03:00 by vflorez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,24 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	c;
-
-	if (n < 0)
+	if (n == -2147483648)
 	{
-		write(fd, "-", 1);
-		n = -n;
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		ft_putnbr_fd(147483648, fd);
 	}
-	if (n > 9)
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
+	}
+	else if (n > 9)
 	{
 		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
 	}
-	c = n % 10 + '0';
-	write (fd, &c, 1);
+	else
+	{
+		ft_putchar_fd(n + '0', fd);
+	}
 }
-/*
-#include <fcntl.h>
-#include <stdio.h>
-
-int main()
-{
-	int fd;
-
-	fd = open( "numnew.txt", O_CREAT | O_WRONLY , 0644);
-	ft_putnbr_fd(-93749, fd);
-	return(0);
-}*/

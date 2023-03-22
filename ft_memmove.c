@@ -6,7 +6,7 @@
 /*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 21:35:56 by vflorez           #+#    #+#             */
-/*   Updated: 2023/03/12 18:30:06 by vflorez          ###   ########.fr       */
+/*   Updated: 2023/03/17 09:06:48 by vflorez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,19 +33,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-#include<stdio.h>
-
-int main()
-{
-	char dest[] = "123456789";
-	char source[] = "ABCDEFGHIJKL";
-	
-	printf("Antes de memmove : SRC %s, DEST %s\n", source, dest);
-
-	ft_memmove(dest, source , 2);
-
-	printf("despues de memmove : SRC %s , DEST %s\n", source, dest);
-
-	return 0;
-}*/

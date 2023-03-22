@@ -6,7 +6,7 @@
 /*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 21:09:21 by vflorez           #+#    #+#             */
-/*   Updated: 2023/03/14 11:41:52 by vflorez          ###   ########.fr       */
+/*   Updated: 2023/03/20 14:02:26 by vflorez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ static int	count_char(int num)
 char	*ft_itoa(int n)
 {
 	int			len;
-	char		*str;
 	long int	conv;
+	char		*str;
 
 	len = count_char(n);
 	str = malloc(sizeof(char) * (len + 1));
@@ -62,13 +62,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	int n = 789;
-	char *result = ft_itoa(n);
-	printf("El numero %d convertido en un string es : %s", n , result);
-	free (result);
-	return(0);
-}*/

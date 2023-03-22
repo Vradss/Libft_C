@@ -6,7 +6,7 @@
 /*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 18:50:06 by vflorez           #+#    #+#             */
-/*   Updated: 2023/03/10 13:18:45 by vflorez          ###   ########.fr       */
+/*   Updated: 2023/03/21 12:15:02 by vflorez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
-/*
-#include <stdio.h>
-
-int main()
-{
-	char s[10] = "vradis";
-	printf("%s", ft_substr(s,3,5));
-	
-	return (0);
-}*/

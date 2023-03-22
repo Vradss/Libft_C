@@ -6,7 +6,7 @@
 /*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 11:11:31 by vflorez           #+#    #+#             */
-/*   Updated: 2023/03/12 20:48:17 by vflorez          ###   ########.fr       */
+/*   Updated: 2023/03/20 12:25:46 by vflorez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	lens1 = ft_strlen(s1);
 	lens2 = ft_strlen(s2);
-	result = malloc (sizeof(char) * (lens1 + lens2 + 1));
+	result = malloc (sizeof(*s1) * (lens1 + lens2 + 1));
 	if (!result)
 		return (NULL);
 	i = 0;
@@ -40,13 +40,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	result[i + j] = '\0';
 	return (result);
 }
-
-/*#include <stdio.h>
-
-int main()
-{
-	char s1[] = "vradis";
-	char s2[] = "florez";
-	printf("%s\n", ft_strjoin(s1,s2));
-	return (0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 20:22:31 by vflorez           #+#    #+#             */
-/*   Updated: 2023/03/12 18:30:30 by vflorez          ###   ########.fr       */
+/*   Updated: 2023/03/17 09:06:42 by vflorez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-#include<stdio.h>
-
-int main()
-{
-	char source[] = "Hola Mundo";
-	char destination [] = "12345";
-
-	ft_memcpy(destination, source, 2);
-
-	printf("La cadena de origen es: %s\n", source);
-	printf("La cadena de destino es : %s\n", destination);
-}*/

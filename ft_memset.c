@@ -6,7 +6,7 @@
 /*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 15:53:48 by vflorez           #+#    #+#             */
-/*   Updated: 2023/03/03 13:46:58 by vflorez          ###   ########.fr       */
+/*   Updated: 2023/03/17 09:06:53 by vflorez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,21 +26,3 @@ void	*ft_memset(void *ptr, int c, size_t n)
 	}
 	return (ptr);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char	str[50] = "Vradis";
-
-	// Imprime el contenido de str antes de llamar a ft_memset
-	printf("Antes: %s\n", str);
-
-	// Llama a ft_memset para llenar str con el valor 'A'
-	ft_memset(str, 'X', 2);
-
-	// Imprime el contenido de str después de llamar a ft_memset
-	printf("Después: %s\n", str);
-
-	return (0);
-}*/

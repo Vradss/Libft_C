@@ -6,7 +6,7 @@
 /*   By: vflorez <vflorez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 20:21:21 by vflorez           #+#    #+#             */
-/*   Updated: 2023/03/16 12:08:21 by vflorez          ###   ########.fr       */
+/*   Updated: 2023/03/17 09:07:36 by vflorez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[dest_len] = '\0';
 	return (src_len);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-size_t ft_strlcat(char *dst, const char *src, size_t size);
-
-int main(void) {
-    char dest[] = "vradis";
-	char src[] = "1234guido";
-
-	printf("%zu", ft_strlcat(dest, src , 50));
-    
-    return 0;
-}*/
